@@ -3,7 +3,7 @@ var OSC = angular.module('OSC',[]);
 OSC.controller("productctrl",function($scope,$http){
 	$http.post(HOME_PATH + "index.php/services/Product.xml").success(function(data){
 			$scope.products = data;
-			$scope.Category = "<?php echo $GLOBALS['url'][5]; ?>";
+			$scope.Category = "<?php echo $GLOBALS['url'][4]; ?>";
 			console.log(data);
 	});
 	$scope.addCart = function(Id,Price){
